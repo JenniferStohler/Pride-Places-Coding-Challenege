@@ -37,7 +37,7 @@ function App() {
       .catch(error => console.error(`Error: ${error}`));
   }
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto text-center bg-gray-300">
       <div className="grid grid-col-3 gap-4">
         <PostsCard posts={posts} />
         <Users users={users} />

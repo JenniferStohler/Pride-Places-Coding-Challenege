@@ -12,7 +12,7 @@ export default function Users(props) {
           return (
             <div className="user" key={user._id}>
               <h3 className="post_title" key={user.name}>{user.name}</h3>
-              <p className="Post_body" key={user.catchPhrase}>{user.company.catchPhrase}</p>
+              <p className="Post_body" key={user.company.catchPhrase}>{user.company.catchPhrase}</p>
             </div>
           )
         })
