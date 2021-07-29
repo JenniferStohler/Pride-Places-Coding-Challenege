@@ -11,8 +11,8 @@ export default function PostsCard(props) {
           console.log(post);
           return (
             <div className="post" key={post._id}>
-              <h3 className="post_title">{post.title}</h3>
-              <p className="Post_body">{post.body}</p>
+              <h3 className="post_title" key={post.title}>{post.title}</h3>
+              <p className="Post_body" key={post.body}>{post.body}</p>
             </div>
           )
         })

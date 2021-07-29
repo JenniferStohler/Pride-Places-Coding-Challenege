@@ -22,7 +22,9 @@ function App() {
       .catch(error => console.error(`Error: ${error}`));
   }
   return (
+    <div className="container mx-auto">
       <PostsCard posts={posts} />
+    </div>
     )
   
   
