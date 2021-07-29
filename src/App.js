@@ -5,6 +5,7 @@ import PostsCard from "./components/PostsCard.js";
 import Users from "./components/Users.js";
 
 
+
 function App() {
   
   const [posts, getPosts] = useState([]);
@@ -40,7 +41,7 @@ function App() {
       .catch(error => console.error(`Error: ${error}`));
   }
   return (
-    <div className="container mx-auto text-center bg-gray-300">
+    <div className="container mx-auto text-center">
       <div className="grid grid-col-3 gap-4 justify-center">
         <PostsCard key={posts.id} posts={posts} />
         <Users key={users.id} users={users} />
