@@ -38,7 +38,7 @@ function App() {
   }
   return (
     <div className="container mx-auto text-center bg-gray-300">
-      <div className="grid grid-col-3 gap-4">
+      <div className="grid grid-col-3 gap-4 justify-center">
         <PostsCard posts={posts} />
         <Users users={users} />
       </div>

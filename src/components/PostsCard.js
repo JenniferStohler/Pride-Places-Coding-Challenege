@@ -10,11 +10,14 @@ export default function PostsCard(props) {
         posts.map((post) => {
           console.log(post);
           return (
-          <div className="max-w-sm rounded overflow-hidden shadow-lg px-5 py-5 bg-white">
+          <div className="max-w-md rounded overflow-hidden shadow-lg px-5 py-5 bg-white">
             <div className="post" key={post._id}>
-              <h3 className="post_title" key={post.title}>{post.title}</h3>
+                <h3 className="post_title" key={post.title}>
+                  <strong>{post.title}</strong>
+                </h3>
               <p className="Post_body" key={post.body}>{post.body}</p>
               </div>
+           <button className="btn px-2 py-2 rounded bg-green-400 text-white">Click Here to Open Modal</button>
           </div>
           )
         })
