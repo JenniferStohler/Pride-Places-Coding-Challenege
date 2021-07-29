@@ -1,9 +1,31 @@
 import React from 'react';
 
-const PostsCard = ({ post }) => {
-  <div className="max-w-sm rounded overflow-hidden shadow-lg">
- 
-</div>
+
+export default function PostsCard(props) {
+  const showPosts = (props) => {
+    const { posts } = props;
+
+    if (posts.length > 0) {
+      return (
+        posts.map((post) => {
+          console.log(post);
+          return (
+            <div className="post" key={post._id}>
+              <h3 className="post_title">{post.title}</h3>
+              <p className="Post_body">{post.body}</p>
+            </div>
+          )
+        })
+      )
+    } else {
+      return (<h3>No posts to show</h3>)
+    }
+  }
+  return (
+    <>
+    { showPosts(props) }
+    </>
+  )
 }
 
 
@@ -13,4 +35,3 @@ const PostsCard = ({ post }) => {
 
 
 
-export default PostsCard;
