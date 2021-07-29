@@ -10,6 +10,8 @@ function App() {
   const [posts, getPosts] = useState([]);
   const [users, getUsers] = useState([]);
 
+  //useEffect is a hook that performs effects in the function component.
+
   useEffect(() => {
     getAllPosts();
   }, []);
@@ -18,7 +20,7 @@ function App() {
     getAllUsers();
   }, []);
 
-
+//Gets all the posts from the API.
   const getAllPosts = () => {
     Axios.get('https://jsonplaceholder.typicode.com/posts')
       .then((res) => {
@@ -28,6 +30,7 @@ function App() {
       .catch(error => console.error(`Error: ${error}`));
   }
 
+//Gets all the users from the API.
   const getAllUsers = () => {
     Axios.get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {

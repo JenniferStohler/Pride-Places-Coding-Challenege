@@ -1,6 +1,8 @@
 import React from 'react';
 
 
+
+//Displays all the users to the page.
 export default function Users(props) {
   const showUsers = (props) => {
     const { users } = props;

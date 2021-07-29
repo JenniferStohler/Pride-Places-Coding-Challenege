@@ -1,6 +1,7 @@
 import React from 'react';
 
 
+//Displays all the posts to the page.
 export default function PostsCard(props) {
   const showPosts = (props) => {
     const { posts } = props;
@@ -10,6 +11,8 @@ export default function PostsCard(props) {
         posts.map((post) => {
           console.log(post);
           return (
+
+            //Card creation here.
           <div className="max-w-md rounded overflow-hidden shadow-lg px-5 py-5 bg-white">
             <div className="post" key={post._id}>
                 <h3 className="post_title" key={post.title}>
