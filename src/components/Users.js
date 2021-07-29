@@ -9,12 +9,12 @@ export default function Users(props) {
 
     if (users.length > 0) {
       return (
-        users.map((user) => {
+        users.map((user, index) => {
           console.log(user);
           return (
-            <div className="user" key={user._id}>
-              <h3 className="post_title" key={user.name}>{user.name}</h3>
-              <p className="Post_body" key={user.company.catchPhrase}>{user.company.catchPhrase}</p>
+            <div className="user" key={index}>
+              <h3 className="user_name">{user.name}</h3>
+              <p className="user_catchphrase">{user.company.catchPhrase}</p>
             </div>
           )
         })

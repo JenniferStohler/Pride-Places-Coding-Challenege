@@ -42,8 +42,8 @@ function App() {
   return (
     <div className="container mx-auto text-center bg-gray-300">
       <div className="grid grid-col-3 gap-4 justify-center">
-        <PostsCard posts={posts} />
-        <Users users={users} />
+        <PostsCard key={posts.id} posts={posts} />
+        <Users key={users.id} users={users} />
       </div>
     </div>
     )
