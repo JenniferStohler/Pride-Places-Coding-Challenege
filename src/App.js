@@ -23,7 +23,9 @@ function App() {
   }
   return (
     <div className="container mx-auto">
-      <PostsCard posts={posts} />
+      <div className="grid grid-col-3 gap-4">
+        <PostsCard posts={posts} />
+      </div>
     </div>
     )
   
