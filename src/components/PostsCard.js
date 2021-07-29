@@ -18,7 +18,7 @@ export default function PostsCard(props) {
                 <h3 className="post_title" key={post.title}>
                   <strong>{post.title}</strong>
                 </h3>
-              <p className="Post_body" key={post.body}>{post.body}</p>
+                <p className="Post_body" key={post.body}>{post.body}</p>
               </div>
            <button className="btn px-2 py-2 rounded bg-green-400 text-white">Click Here to Open Modal</button>
           </div>
