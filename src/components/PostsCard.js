@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 
@@ -21,12 +22,14 @@ export default function PostsCard(props) {
                     <p className="post_body">{post.body}</p>
                     <button onClick={() => setShowModal(true)} className="btn px-2 py-2 rounded bg-green-400 text-white">
                       Click Here to Open Modal
-                     </button>
+                    </button>
                      <Modal isOpen={showModal}
                         onRequestClose={props.clearSelectedOption}
                         ariaHideApp={false}
-                        contentLabel="Selected Option"
-                      >
+                      contentLabel="Selected Option"
+                    >
+                      {post.body}
+                      <button className="btn px-2 py-2 rounded bg-red-400 text-white" onClick={() => setShowModal(false)}>Close Modal</button>
                       </Modal>
                   
                   </div>
