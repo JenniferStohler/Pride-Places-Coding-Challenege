@@ -24,7 +24,7 @@ export default function PostsCard(props) {
                       Click Here to Open Modal
                     </button>
                      <Modal isOpen={showModal}
-                        onRequestClose={props.clearSelectedOption}
+                        onRequestClose={() => setShowModal(false)}
                         ariaHideApp={false}
                       contentLabel="Selected Option"
                     >
