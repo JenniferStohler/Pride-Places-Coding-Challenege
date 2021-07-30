@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import PostsCard from "./components/PostsCard.js";
 import Users from "./components/Users.js";
+import Modal from "react-modal";
 
 
-
+Modal.setAppElement('#root')
 function App() {
   
   const [posts, getPosts] = useState([]);

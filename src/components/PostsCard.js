@@ -23,12 +23,11 @@ export default function PostsCard(props) {
                     <button onClick={() => setShowModal(true)} className="btn px-2 py-2 rounded bg-green-400 text-white">
                       Click Here to Open Modal
                     </button>
-                     <Modal isOpen={showModal}
-                        onRequestClose={() => setShowModal(false)}
-                        ariaHideApp={false}
+                    <Modal isOpen={showModal}
+                      onRequestClose={() => setShowModal(false)}
+                      ariaHideApp={false}
                       contentLabel="Selected Option"
                     >
-                      {post.body}
                       <button className="btn px-2 py-2 rounded bg-red-400 text-white" onClick={() => setShowModal(false)}>Close Modal</button>
                       </Modal>
                   
