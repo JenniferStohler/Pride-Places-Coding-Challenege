@@ -7,7 +7,7 @@ import Modal from "react-modal";
 
 
 Modal.setAppElement('#root')
-function App() {
+function App()   {
   
   const [posts, getPosts] = useState([]);
   const [users, getUsers] = useState([]);
@@ -46,6 +46,9 @@ function App() {
       })
       .catch(error => console.error(`Error: ${error}`));
   }
+  
+
+
   return (
     <div className="container mx-auto text-center">
       <div className="grid grid-col-3 gap-4 justify-center">
@@ -55,8 +58,8 @@ function App() {
               isOpen={showModal}
               onRequestClose={toggleModal}
               contentLabel="posts"
-            >
-              <button onClick={toggleModal}>Close Modal</button>
+        >
+              <button onClick={toggleModal} className="bg-red-400 rounded px-2 py-2 text-white">Close Modal</button>
             </Modal>
         <Users key={users.id} users={users} />
       </div>
