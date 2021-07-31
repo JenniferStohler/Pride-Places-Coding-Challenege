@@ -11,6 +11,11 @@ function App() {
   
   const [posts, getPosts] = useState([]);
   const [users, getUsers] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+
+  function toggleModal() {
+    setShowModal(!showModal);
+  }
 
   //useEffect is a hook that performs effects in the function component.
 
@@ -44,7 +49,15 @@ function App() {
   return (
     <div className="container mx-auto text-center">
       <div className="grid grid-col-3 gap-4 justify-center">
-        <PostsCard key={posts.id} posts={posts} />
+        <button onClick={toggleModal}>
+          <PostsCard key={posts.id} posts={posts} /></button>
+            <Modal
+              isOpen={showModal}
+              onRequestClose={toggleModal}
+              contentLabel="posts"
+            >
+              <button onClick={toggleModal}>Close Modal</button>
+            </Modal>
         <Users key={users.id} users={users} />
       </div>
     </div>
