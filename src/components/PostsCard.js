@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalPostsComponent from "./ModalPostsComponent";
 
 
 
@@ -8,6 +9,13 @@ import React from 'react';
 export default function PostsCard(props) {
 
   const showPosts = (props) => {
+    const intitialPosts = {
+      id: null,
+      title: "",
+      body: ""
+    };
+
+    const []
   const { posts } = props;
   
 
@@ -19,10 +27,10 @@ export default function PostsCard(props) {
               return (
                 <div className="post" key={index}>
                   <div className="max-w-md rounded overflow-hidden shadow-lg px-5 py-5 bg-white">  
-                    <h3 className="post_title">{post.title}</h3>
-                      <p className="post_body">{post.body}</p>
-                        
-                  
+                    <h2 className="post_title"><strong>{post.title}</strong></h2>
+                      <div className="px-2 py-2">
+                      <ModalPostsComponent />
+                      </div>
                   </div>
                 </div>
                   
