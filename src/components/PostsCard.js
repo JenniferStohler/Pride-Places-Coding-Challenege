@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ModalPostsComponent from "./ModalPostsComponent";
 
@@ -15,7 +16,7 @@ export default function PostsCard(props) {
       body: ""
     };
 
-    const []
+   
   const { posts } = props;
   
 
@@ -47,11 +48,3 @@ export default function PostsCard(props) {
     </>
   )
 }
-
-
-
-
-
-
-
-
