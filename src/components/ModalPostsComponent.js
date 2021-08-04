@@ -11,15 +11,15 @@ class ModalPostsComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      post: {
-       
-          body: ''
-        
+      posts: {
+        body:''
       },
       users: [],
       catchPhrase: "",
       isOpen: false
     }
+    
+    
   }
   openModal = () => this.setState({ isOpen: true });
   closeModal = () => this.setState({ isOpen: false });
@@ -47,7 +47,9 @@ class ModalPostsComponent extends React.Component {
               <Modal.Title>Modal heading</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              {/* <PostsCard title={this.state.post.title} key={this.state.post.id} body={this.state.post.body} /> */}
+              <PostsCard>
+                {this.state.body}
+              </PostsCard>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="danger" onClick={this.closeModal}>
